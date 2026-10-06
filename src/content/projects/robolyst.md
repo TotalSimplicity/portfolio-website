@@ -22,10 +22,10 @@ FTC teams juggle tasks, budgets, documentation, outreach, and scouting across a 
 
 Team HQ is the core of Robolyst. The hard part was not any single feature, it was making them all work as one system:
 
-- **Tasks, schedule, and checklists** link together: due dates show on the calendar, competition events come in from the official FTC database, and pre-match checklists start 15 minutes before each match
-- **Engineering notebook** entries cite tasks and teammates, pull from a shared photo and file library, and map to award requirements
 - **Finance** runs parts requests through approval, ordering, and receipt, tagged by budget line and subsystem
 - **Fiscal sponsorship** lets teams operate under the Robotics Catalyst Foundation's 501(c)(3), with debit cards, automatic receipt chasing, and tax-deductible donation pages
+- **Tasks, schedule, and checklists** link together: due dates show on the calendar, competition events come in from the official FTC database, and pre-match checklists start 15 minutes before each match
+- **Engineering notebook** entries cite tasks and teammates, pull from a shared photo and file library, and map to award requirements
 - **Discord bot** mirrors tasks, meetings, orders, and checklists, and every change syncs back to the portal
 - **Public team websites** draw from the same photos, awards, sponsors, and outreach records
 - **58 permission switches** and notification routing for 70 event types

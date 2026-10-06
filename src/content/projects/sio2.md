@@ -4,7 +4,8 @@ date: 2026-07-01
 summary: A research platform for building, optimizing, and backtesting intraday silver futures strategies.
 tags: [software, finance]
 role: Developer
-order: 3.5
+featured: true
+order: 1.2
 ---
 
 ## What it does

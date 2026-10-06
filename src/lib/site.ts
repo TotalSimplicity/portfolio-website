@@ -1,9 +1,9 @@
 export const site = {
 	name: 'Leonardo Kulon',
-	tagline: 'Senior @ Wilton High School',
+	tagline: 'Wilton High School, Class of 2027',
 	url: 'https://leonardokulon.com',
 	description:
-		'Leonardo Kulon, a Wilton High School senior heading into finance and computer science. Sole developer of Robolyst, the team platform used by 160+ robotics teams in 19 countries.',
+		'Leonardo Kulon, a Wilton High School senior applying to study finance with a computer science minor. Builder of an intraday futures backtesting platform, founder of a robotics nonprofit that has raised over $14,000, and sole developer of Robolyst.',
 	email: 'leonardo.kulon@gmail.com',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/totalsimplicity' },

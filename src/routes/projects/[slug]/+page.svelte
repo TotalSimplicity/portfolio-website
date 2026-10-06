@@ -9,21 +9,25 @@
 
 <Meta title={project.title} description={project.summary} image={project.cover?.img.src} />
 
-<a href="/projects" class="text-sm text-muted hover:text-fg">← Projects</a>
+<a href="/projects" class="text-muted hover:text-fg">← Projects</a>
 
-<header class="mt-6">
-	<h1 class="text-3xl font-semibold tracking-tight">{project.title}</h1>
-	<p class="mt-3 text-lg text-muted">{project.summary}</p>
-	<dl class="mt-5 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+<header class="mt-8">
+	<h1 class="max-w-[16ch] text-[clamp(2rem,6.5vw,4.5rem)] font-display [overflow-wrap:break-word]">
+		{project.title}
+	</h1>
+	<p class="mt-6 max-w-[48ch] text-xl leading-snug text-pretty text-muted">{project.summary}</p>
+	<dl
+		class="mt-10 grid grid-cols-2 gap-x-8 gap-y-5 border-y border-line py-5 sm:flex sm:flex-wrap sm:gap-x-14"
+	>
 		{#if project.role}
 			<div>
-				<dt class="text-muted">Role</dt>
-				<dd>{project.role}</dd>
+				<dt class="text-sm text-muted">Role</dt>
+				<dd class="mt-1">{project.role}</dd>
 			</div>
 		{/if}
 		<div>
-			<dt class="text-muted">Date</dt>
-			<dd>
+			<dt class="text-sm text-muted">Date</dt>
+			<dd class="mt-1">
 				<time datetime={project.date}>
 					{new Date(project.date).toLocaleDateString('en-US', {
 						month: 'long',
@@ -34,11 +38,15 @@
 			</dd>
 		</div>
 		{#if project.links?.length}
-			<div>
-				<dt class="text-muted">Links</dt>
-				<dd class="flex gap-3">
+			<div class="col-span-2">
+				<dt class="text-sm text-muted">Links</dt>
+				<dd class="mt-1 flex flex-wrap gap-x-5 gap-y-1">
 					{#each project.links as link (link.href)}
-						<a href={link.href} class="text-accent underline underline-offset-2">{link.label}</a>
+						<a
+							href={link.href}
+							class="text-accent underline decoration-1 underline-offset-3 hover:decoration-2"
+							>{link.label} ↗</a
+						>
 					{/each}
 				</dd>
 			</div>
@@ -47,16 +55,18 @@
 </header>
 
 {#if project.cover}
-	<enhanced:img
-		src={project.cover}
-		alt=""
-		sizes="(min-width: 768px) 768px, 100vw"
-		fetchpriority="high"
-		class="mt-8 w-full rounded-lg border border-line"
-	/>
+	<div class="mt-10 overflow-hidden bg-line" style:view-transition-name="cover-{project.slug}">
+		<enhanced:img
+			src={project.cover}
+			alt=""
+			sizes="(min-width: 1024px) 960px, 100vw"
+			fetchpriority="high"
+			class="block w-full"
+		/>
+	</div>
 {/if}
 
-<article class="prose mt-10">
+<article class="prose mt-12">
 	<project.content />
 </article>
 

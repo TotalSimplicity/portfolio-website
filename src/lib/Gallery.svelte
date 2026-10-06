@@ -21,14 +21,14 @@
 	}
 </script>
 
-<section class="mt-12">
-	<h2 class="text-lg font-semibold tracking-tight">Gallery</h2>
+<section class="mt-16">
+	<h2 class="text-2xl font-display">Gallery</h2>
 	<div class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
 		{#each images as image, i (image.img.src)}
 			<button
 				type="button"
 				onclick={() => open(i)}
-				class="aspect-square overflow-hidden rounded-md border border-line"
+				class="group aspect-square overflow-hidden bg-line"
 				aria-label="Open image {i + 1} of {images.length}"
 			>
 				<enhanced:img
@@ -36,7 +36,7 @@
 					alt=""
 					sizes="(min-width: 640px) 240px, 50vw"
 					loading="lazy"
-					class="size-full object-cover"
+					class="size-full object-cover transition-transform duration-500 ease-(--ease-expo) group-hover:scale-[1.04]"
 				/>
 			</button>
 		{/each}
@@ -54,7 +54,7 @@
 		<enhanced:img
 			src={images[index]}
 			alt="{title}, image {index + 1} of {images.length}"
-			class="max-h-full max-w-full rounded-md object-contain"
+			class="max-h-full max-w-full object-contain"
 		/>
 		<button
 			type="button"
