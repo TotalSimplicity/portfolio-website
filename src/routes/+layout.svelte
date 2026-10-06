@@ -34,7 +34,6 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<meta name="description" content={site.tagline} />
 </svelte:head>
 
 <div class="mx-auto flex min-h-dvh max-w-3xl flex-col px-5">

@@ -32,7 +32,7 @@ const pictures = import.meta.glob<{ default: Picture }>(
 	{ eager: true, query: { enhanced: true } }
 );
 
-export const tags = ['robotics', 'software', 'leadership', 'awards'];
+export const tags = ['software', 'finance', 'robotics', 'leadership', 'awards'];
 
 export const projects: Project[] = Object.entries(docs)
 	.map(([path, doc]) => {

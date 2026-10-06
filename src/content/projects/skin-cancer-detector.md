@@ -1,7 +1,7 @@
 ---
 title: Skin Cancer Detector
 date: 2024-01-24
-summary: A CNN that classifies skin lesions as benign or malignant, live from a webcam.
+summary: A CNN that classifies skin lesions as benign or malignant from a live webcam feed, with 86% accuracy.
 tags: [software]
 role: Solo developer
 links:
@@ -13,5 +13,5 @@ order: 3
 ## How it works
 
 - Keras model fine-tuned from VGG16 on the HAM10000 dermatoscopic image dataset
-- Several training iterations with data augmentation
+- Several training iterations with data augmentation, reaching 86% accuracy
 - OpenCV script classifies webcam frames in real time

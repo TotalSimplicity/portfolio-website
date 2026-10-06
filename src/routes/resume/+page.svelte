@@ -1,10 +1,9 @@
 <script lang="ts">
+	import Meta from '#lib/Meta.svelte';
 	import { site } from '#lib/site.ts';
 </script>
 
-<svelte:head>
-	<title>Resume · {site.name}</title>
-</svelte:head>
+<Meta title="Resume" description="Resume and contact information for Leonardo Kulon." />
 
 <h1 class="text-3xl font-semibold tracking-tight">Resume</h1>
 

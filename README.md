@@ -17,7 +17,7 @@ npm run build
 title: Competition Robot
 date: 2026-03-15
 summary: One sentence for the card.
-tags: [robotics, leadership] # robotics | software | leadership | awards
+tags: [robotics, leadership] # software | finance | robotics | leadership | awards
 role: Mechanical lead
 featured: true # show on home page
 cover: cover.jpg # optional, defaults to first image

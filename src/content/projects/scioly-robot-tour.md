@@ -11,7 +11,7 @@ links:
 
 ## Results
 
-Placed top 4 in the state in three separate events at the Connecticut competition at UConn.
+Placed top 4 in the state in three events at the Connecticut competition at UConn: Robot Tour, Hovercraft, and Boomilever.
 
 ## Robot Tour
 

@@ -1,16 +1,13 @@
 <script lang="ts">
 	import Gallery from '#lib/Gallery.svelte';
-	import { site } from '#lib/site.ts';
+	import Meta from '#lib/Meta.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
 	const project = $derived(data.project);
 </script>
 
-<svelte:head>
-	<title>{project.title} · {site.name}</title>
-	<meta name="description" content={project.summary} />
-</svelte:head>
+<Meta title={project.title} description={project.summary} image={project.cover?.img.src} />
 
 <a href="/projects" class="text-sm text-muted hover:text-fg">← Projects</a>
 

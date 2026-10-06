@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Meta from '#lib/Meta.svelte';
 	import ProjectCard from '#lib/ProjectCard.svelte';
 	import { projects } from '#lib/projects.ts';
 	import { site } from '#lib/site.ts';
@@ -6,15 +7,15 @@
 	const featured = projects.filter((p) => p.featured).slice(0, 4);
 </script>
 
-<svelte:head>
-	<title>{site.name}</title>
-</svelte:head>
+<Meta />
 
 <section class="max-w-xl">
 	<h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">Hi, I'm {site.name}.</h1>
 	<p class="mt-4 text-lg text-muted">{site.tagline}</p>
 	<p class="mt-4 leading-relaxed">
-	Prospective Finance & CS Student. Interested in software development & algorithmic trading.
+		I'm applying to study finance with a minor in computer science. I build software people use: I'm
+		the sole developer of Robolyst, the team HQ for 160+ robotics teams in 19 countries. On the side
+		I build trading research tools, lead robotics teams, and am a Sea Scout.
 	</p>
 </section>
 

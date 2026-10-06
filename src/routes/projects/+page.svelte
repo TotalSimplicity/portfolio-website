@@ -1,15 +1,16 @@
 <script lang="ts">
+	import Meta from '#lib/Meta.svelte';
 	import ProjectCard from '#lib/ProjectCard.svelte';
 	import { projects, tags } from '#lib/projects.ts';
-	import { site } from '#lib/site.ts';
 
 	let active = $state<string | null>(null);
 	const shown = $derived(active ? projects.filter((p) => p.tags.includes(active!)) : projects);
 </script>
 
-<svelte:head>
-	<title>Projects · {site.name}</title>
-</svelte:head>
+<Meta
+	title="Projects"
+	description="Software, robotics, and trading projects by Leonardo Kulon, from Robolyst to FTC Worlds."
+/>
 
 <h1 class="text-3xl font-semibold tracking-tight">Projects</h1>
 
