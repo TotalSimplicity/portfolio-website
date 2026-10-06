@@ -4,8 +4,10 @@ import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import { defineConfig } from 'vite';
+import { Features } from 'lightningcss';
 
 export default defineConfig({
+	css: { lightningcss: { exclude: Features.LightDark } },
 	plugins: [
 		enhancedImages(),
 		tailwindcss(),
