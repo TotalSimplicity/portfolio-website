@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-bg: light-dark(#fbfbfa, #111112);
+	--color-fg: light-dark(#18181b, #ececee);
+	--color-muted: light-dark(#6b6b73, #9a9aa3);
+	--color-line: light-dark(#e4e4e7, #2a2a2e);
+	--color-card: light-dark(#ffffff, #19191b);
+	--color-accent: light-dark(#2952e3, #7b9bff);
+}
+
+:root {
+	color-scheme: light dark;
+}
+
+body {
+	@apply bg-bg text-fg antialiased;
+}
+
+.prose {
+	@apply max-w-none leading-relaxed;
+}
+.prose > * + * {
+	@apply mt-4;
+}
+.prose h2 {
+	@apply mt-10 text-xl font-semibold tracking-tight;
+}
+.prose h3 {
+	@apply mt-8 font-semibold;
+}
+.prose a {
+	@apply text-accent underline underline-offset-2;
+}
+.prose ul {
+	@apply list-disc pl-5;
+}
+.prose ol {
+	@apply list-decimal pl-5;
+}
+.prose li + li {
+	@apply mt-1;
+}
+.prose code {
+	@apply rounded bg-line px-1 py-0.5 text-sm;
+}
